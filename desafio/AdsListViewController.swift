@@ -8,26 +8,51 @@
 import UIKit
 
 class AdsListViewController: UIViewController {
-    
+
     // Mark: properties
-    
+
     var ads: [Ad] = []
     lazy private var flowLayout: AdListViewLayout = {
         let layout = AdListViewLayout()
         return layout
     }()
-    
+    let session = URLSession.shared
+    let url = URL(string: "https://nga.olx.com.br/api/v1.2/public/ads?lim=25&region=11&sort=relevance&state=1&lang=pt")!
+
     // Mark: outlets
 
     @IBOutlet weak var adsCollectionView: UICollectionView!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        adsCollectionView.delegate = self
+        setupUI()
+        getAds()
     }
     
-
+    // Mark: REST
+    
+    private func getAds() {
+        let task = session.dataTask(with: url, completionHandler: { data, response, error in
+            // Check the response
+            print(response)
+            if error != nil {
+                print(error)
+                return
+            }
+            // Serialize the data into an object
+            do {
+                let json = try JSONDecoder().decode(ListAds.self, from: data! )
+                print(json)
+                self.ads = json.list_ads ?? []
+                DispatchQueue.main.async {
+                    self.adsCollectionView.reloadData()
+                }
+            } catch {
+                print("Error during JSON serialization: \(error.localizedDescription)")
+            }
+        })
+        task.resume()
+    }
 
 }
 
@@ -37,16 +62,15 @@ extension AdsListViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ads.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = adsCollectionView.dequeueReusableCell(withReuseIdentifier: AdListViewCell.reuseIdentifier(), for: indexPath) as? AdListViewCell, !ads.isEmpty else {
+        guard let cell = adsCollectionView.dequeueReusableCell(withReuseIdentifier: "AdListViewCellIdentifier", for: indexPath) as? AdListViewCell, !ads.isEmpty else {
             return UICollectionViewCell()
         }
+        cell.setup(ad: ads[indexPath.row])
         return cell
     }
-    
-    
 }
 
 // MARK: Setup
@@ -57,8 +81,6 @@ extension AdsListViewController {
             adsCollectionView.delegate = self
             adsCollectionView.dataSource = self
             adsCollectionView.collectionViewLayout = flowLayout
-            adsCollectionView.register(UINib(nibName: "AdListViewCell", bundle: nil), forCellWithReuseIdentifier: "AdListViewCell")
-       
+            adsCollectionView.register(UINib(nibName: "AdListViewCell", bundle: nil), forCellWithReuseIdentifier: "AdListViewCellIdentifier")
     }
-    
 }

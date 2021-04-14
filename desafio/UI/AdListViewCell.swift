@@ -8,16 +8,17 @@
 import UIKit
 
 class AdListViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var adDate: UILabel!
+    @IBOutlet weak var adPrice: InsetLabel!
     @IBOutlet weak var adTitle: UILabel!
-    
     @IBOutlet weak var adImage: UIImageView!
-    @IBOutlet weak var adPrice: UILabel!
-    
-    @IBOutlet weak var adLocationDate: UILabel!
-    static func nibName() -> String {
-        return "AdListViewCell"
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        //self.setupUI()
     }
-    static func reuseIdentifier() -> String {
-        return "AdListViewCellIdentifier"
+
+    func setup(ad: Ad) {
+        self.adTitle.text = ad.ad.subject
     }
 }
