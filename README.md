@@ -12,13 +12,7 @@ Faça um fork desse repo e refatore o aplicativo para uma nova arquitetura que g
 * Reuso, ou seja, permitir que partes do app possam ser reaproveitadas em outros apps  
 * Testabilidade - Aqui gostaríamos de analisar sua implementação de testes unitários e de UI 
 
-Inclua em seu README a resposta para as seguintes perguntas:
-
-* Explique a arquitetura da sua solução
-* Comparando com a versão inicial, como sua solução garante uma maior escalabilidade (estar mais aberta a novas features ou alterações de features existentes)
-* Comparando com a versão inicial, como sua solução garante um maior reuso (conseguir reutilizar partes desse app em outros apps)
-
-Você poderá ganhar pontos extras se:
+Você poderá ganhar pontos extras se (totalmente opcional):
 
 * Implementar automação de CI/CD
 * Habilitar ferramenta de análise estática de seu código  
