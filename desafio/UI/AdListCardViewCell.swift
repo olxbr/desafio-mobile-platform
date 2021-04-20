@@ -43,7 +43,8 @@ class AdListCardViewCell: UICollectionViewCell {
         dateFormatter.locale = Locale(identifier: "pt-BR")
         dateFormatter.dateFormat = "dd/MM 'às' HH:mm"
         timeLocationLabel.text = "\(location) - \(dateFormatter.string(from: date))"
-        let imageUrl = "\(String(describing: ad.ad.thumbnail?.base_url))/images/\(String(describing: ad.ad.thumbnail?.path))"
+        guard let thumb = ad.ad.thumbnail else { return }
+        let imageUrl = "\(String(describing: thumb.base_url))/images/\(String(describing: thumb.path))"
         self.adImageView.downloaded(from: imageUrl)
     
     }

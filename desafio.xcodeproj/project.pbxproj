@@ -124,7 +124,6 @@
 				6C58CC8E2625FF0C001F7524 /* Info.plist */,
 				6C58CCD126261245001F7524 /* Ad.swift */,
 				6C2582C72626305600E30FDB /* AdsListViewController.swift */,
-				6C19D333262F127B00068196 /* UIImageView+Extension.swift */,
 			);
 			path = desafio;
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 				6C4BF0122628B98300B6752C /* AdListCardViewCell.swift */,
 				6C4BF0172628BA3600B6752C /* UIView+Extension.swift */,
 				6C4BF0242628BE5000B6752C /* UIColor+Extension.swift */,
+				6C19D333262F127B00068196 /* UIImageView+Extension.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
