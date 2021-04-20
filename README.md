@@ -18,9 +18,10 @@ Inclua em seu README a resposta para as seguintes perguntas:
 * Comparando com a versão inicial, como sua solução garante uma maior escalabilidade (estar mais aberto a novas features ou alterações de features existentes)
 * Comparando com a versão inicial, como sua solução garante um maior reuso (conseguir reutilizar partes desse app em outros apps)
 
-Você ganhará pontos extras se:
+Você poderá ganhar pontos extras se:
 
-* Conseguir implementar uma automação de CI/CD 
+* Implementar automação de CI/CD
+* Habilitar ferramenta de análise estática de seu código  
 
 Dica:
 
