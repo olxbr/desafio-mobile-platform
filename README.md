@@ -15,7 +15,7 @@ Faça um fork desse repo e refatore o aplicativo para uma nova arquitetura que g
 Inclua em seu README a resposta para as seguintes perguntas:
 
 * Explique a arquitetura da sua solução
-* Comparando com a versão inicial, como sua solução garante uma maior escalabilidade (estar mais aberto a novas features ou alterações de features existentes)
+* Comparando com a versão inicial, como sua solução garante uma maior escalabilidade (estar mais aberta a novas features ou alterações de features existentes)
 * Comparando com a versão inicial, como sua solução garante um maior reuso (conseguir reutilizar partes desse app em outros apps)
 
 Você poderá ganhar pontos extras se:
