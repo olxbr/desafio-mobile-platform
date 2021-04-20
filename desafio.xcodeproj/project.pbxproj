@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C19D334262F127B00068196 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C19D333262F127B00068196 /* UIImageView+Extension.swift */; };
 		6C2582C82626305600E30FDB /* AdsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2582C72626305600E30FDB /* AdsListViewController.swift */; };
 		6C4BF00E26277F8900B6752C /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BF00D26277F8900B6752C /* InsetLabel.swift */; };
+		6C4BF0132628B98300B6752C /* AdListCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BF0122628B98300B6752C /* AdListCardViewCell.swift */; };
+		6C4BF0182628BA3600B6752C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BF0172628BA3600B6752C /* UIView+Extension.swift */; };
+		6C4BF01D2628BBAB00B6752C /* AdListCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4BF01C2628BBAB00B6752C /* AdListCardViewCell.xib */; };
+		6C4BF0252628BE5000B6752C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BF0242628BE5000B6752C /* UIColor+Extension.swift */; };
 		6C58CC812625FF09001F7524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CC802625FF09001F7524 /* AppDelegate.swift */; };
 		6C58CC832625FF09001F7524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CC822625FF09001F7524 /* SceneDelegate.swift */; };
 		6C58CC882625FF09001F7524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C58CC862625FF09001F7524 /* Main.storyboard */; };
@@ -16,9 +21,7 @@
 		6C58CC8D2625FF0C001F7524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C58CC8B2625FF0C001F7524 /* LaunchScreen.storyboard */; };
 		6C58CC982625FF0D001F7524 /* desafioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CC972625FF0D001F7524 /* desafioTests.swift */; };
 		6C58CCA32625FF0D001F7524 /* desafioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCA22625FF0D001F7524 /* desafioUITests.swift */; };
-		6C58CCB826260004001F7524 /* AdListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C58CCB726260004001F7524 /* AdListViewCell.xib */; };
 		6C58CCBD26260262001F7524 /* AdListViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCBC26260262001F7524 /* AdListViewLayout.swift */; };
-		6C58CCCA2626076D001F7524 /* AdListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCC92626076D001F7524 /* AdListViewCell.swift */; };
 		6C58CCD226261245001F7524 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCD126261245001F7524 /* Ad.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C19D333262F127B00068196 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6C2582C72626305600E30FDB /* AdsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListViewController.swift; sourceTree = "<group>"; };
 		6C4BF00D26277F8900B6752C /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
+		6C4BF0122628B98300B6752C /* AdListCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdListCardViewCell.swift; sourceTree = "<group>"; };
+		6C4BF0172628BA3600B6752C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		6C4BF01C2628BBAB00B6752C /* AdListCardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdListCardViewCell.xib; sourceTree = "<group>"; };
+		6C4BF0242628BE5000B6752C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		6C58CC7D2625FF09001F7524 /* desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C58CC802625FF09001F7524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C58CC822625FF09001F7524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,9 +63,7 @@
 		6C58CC9E2625FF0D001F7524 /* desafioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C58CCA22625FF0D001F7524 /* desafioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafioUITests.swift; sourceTree = "<group>"; };
 		6C58CCA42625FF0D001F7524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C58CCB726260004001F7524 /* AdListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdListViewCell.xib; sourceTree = "<group>"; };
 		6C58CCBC26260262001F7524 /* AdListViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdListViewLayout.swift; sourceTree = "<group>"; };
-		6C58CCC92626076D001F7524 /* AdListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdListViewCell.swift; sourceTree = "<group>"; };
 		6C58CCD126261245001F7524 /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +124,7 @@
 				6C58CC8E2625FF0C001F7524 /* Info.plist */,
 				6C58CCD126261245001F7524 /* Ad.swift */,
 				6C2582C72626305600E30FDB /* AdsListViewController.swift */,
+				6C19D333262F127B00068196 /* UIImageView+Extension.swift */,
 			);
 			path = desafio;
 			sourceTree = "<group>";
@@ -143,10 +150,12 @@
 		6C58CCB62625FFB4001F7524 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				6C58CCB726260004001F7524 /* AdListViewCell.xib */,
+				6C4BF01C2628BBAB00B6752C /* AdListCardViewCell.xib */,
 				6C58CCBC26260262001F7524 /* AdListViewLayout.swift */,
-				6C58CCC92626076D001F7524 /* AdListViewCell.swift */,
 				6C4BF00D26277F8900B6752C /* InsetLabel.swift */,
+				6C4BF0122628B98300B6752C /* AdListCardViewCell.swift */,
+				6C4BF0172628BA3600B6752C /* UIView+Extension.swift */,
+				6C4BF0242628BE5000B6752C /* UIColor+Extension.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -255,9 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C58CC8D2625FF0C001F7524 /* LaunchScreen.storyboard in Resources */,
+				6C4BF01D2628BBAB00B6752C /* AdListCardViewCell.xib in Resources */,
 				6C58CC8A2625FF0C001F7524 /* Assets.xcassets in Resources */,
 				6C58CC882625FF09001F7524 /* Main.storyboard in Resources */,
-				6C58CCB826260004001F7524 /* AdListViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C58CCCA2626076D001F7524 /* AdListViewCell.swift in Sources */,
+				6C19D334262F127B00068196 /* UIImageView+Extension.swift in Sources */,
+				6C4BF0252628BE5000B6752C /* UIColor+Extension.swift in Sources */,
+				6C4BF0132628B98300B6752C /* AdListCardViewCell.swift in Sources */,
 				6C58CC812625FF09001F7524 /* AppDelegate.swift in Sources */,
+				6C4BF0182628BA3600B6752C /* UIView+Extension.swift in Sources */,
 				6C2582C82626305600E30FDB /* AdsListViewController.swift in Sources */,
 				6C58CCD226261245001F7524 /* Ad.swift in Sources */,
 				6C58CC832625FF09001F7524 /* SceneDelegate.swift in Sources */,

@@ -65,10 +65,10 @@ extension AdsListViewController: UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = adsCollectionView.dequeueReusableCell(withReuseIdentifier: "AdListViewCellIdentifier", for: indexPath) as? AdListViewCell, !ads.isEmpty else {
+        guard let cell = adsCollectionView.dequeueReusableCell(withReuseIdentifier: "AdListCardViewCellIdentifier", for: indexPath) as? AdListCardViewCell, !ads.isEmpty else {
             return UICollectionViewCell()
         }
-        cell.setup(ad: ads[indexPath.row])
+        cell.configure(ad: ads[indexPath.row])
         return cell
     }
 }
@@ -81,6 +81,6 @@ extension AdsListViewController {
             adsCollectionView.delegate = self
             adsCollectionView.dataSource = self
             adsCollectionView.collectionViewLayout = flowLayout
-            adsCollectionView.register(UINib(nibName: "AdListViewCell", bundle: nil), forCellWithReuseIdentifier: "AdListViewCellIdentifier")
+            adsCollectionView.register(UINib(nibName: "AdListCardViewCell", bundle: nil), forCellWithReuseIdentifier: "AdListCardViewCellIdentifier")
     }
 }
