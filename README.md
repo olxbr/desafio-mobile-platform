@@ -2,7 +2,7 @@
 
 Uma das principais responsabilidades do time de *mobile platform* da OLX Brasil é evoluir constantemente a arquitetura dos nossos apps.
 
-Para isto, as pessoas engenheiras da nossa squad precisam dominar as melhores práticas de arquiteura de software (ex: modularização e desacoplamento), assim como garantir a qualidade e segurança.
+Para isto, as pessoas engenheiras da nossa squad precisam dominar as melhores práticas de arquitetura de software (ex: modularização e desacoplamento), assim como garantir a qualidade e segurança.
 
 Desafio:
 
