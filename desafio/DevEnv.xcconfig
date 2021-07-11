@@ -1,0 +1,13 @@
+//
+//  DevEnv.xcconfig
+//  desafio
+//
+//  Created by Victor Valfre on 11/07/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+Enviroment          = Develop
+BaseUrl             = nga.olx.com.br/api/v1.2/public/
