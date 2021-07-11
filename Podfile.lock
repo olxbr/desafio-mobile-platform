@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (5.4.3)
+  - AlamofireNetworkActivityLogger (3.4.0):
+    - Alamofire (~> 5.4.0)
+  - PromisesObjC (2.0.0)
+  - PromisesSwift (2.0.0):
+    - PromisesObjC (= 2.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4)
+  - AlamofireNetworkActivityLogger (~> 3.4)
+  - PromisesSwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireNetworkActivityLogger
+    - PromisesObjC
+    - PromisesSwift
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  AlamofireNetworkActivityLogger: 162ab8aee00e6267a4304d7cc134e13ccfe3bcc5
+  PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  PromisesSwift: e0b2a6433469efb0b83a2b84c62a2abab8e5e5d4
+
+PODFILE CHECKSUM: 7890fe240f00fcbe611605a7b62dcaee55ef2cec
+
+COCOAPODS: 1.8.4
