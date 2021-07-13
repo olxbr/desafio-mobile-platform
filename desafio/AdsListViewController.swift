@@ -32,26 +32,40 @@ class AdsListViewController: UIViewController {
     // Mark: REST
     
     private func getAds() {
-        let task = session.dataTask(with: url, completionHandler: { data, response, error in
-            // Check the response
-            print(response)
-            if error != nil {
-                print(error)
-                return
+        
+        ProductApiClient.listProducts().then(on: .main) { response in
+            
+            self.ads = response.list_ads ?? []
+            DispatchQueue.main.async {
+                self.adsCollectionView.reloadData()
             }
-            // Serialize the data into an object
-            do {
-                let json = try JSONDecoder().decode(ListAds.self, from: data! )
-                print(json)
-                self.ads = json.list_ads ?? []
-                DispatchQueue.main.async {
-                    self.adsCollectionView.reloadData()
-                }
-            } catch {
-                print("Error during JSON serialization: \(error.localizedDescription)")
+        }.catch(on: .main) { error in
+            self.ads =  []
+            DispatchQueue.main.async {
+                self.adsCollectionView.reloadData()
             }
-        })
-        task.resume()
+        }
+        
+//        let task = session.dataTask(with: url, completionHandler: { data, response, error in
+//            // Check the response
+//            print(response)
+//            if error != nil {
+//                print(error)
+//                return
+//            }
+//            // Serialize the data into an object
+//            do {
+//                let json = try JSONDecoder().decode(ListAds.self, from: data! )
+//                print(json)
+//                self.ads = json.list_ads ?? []
+//                DispatchQueue.main.async {
+//                    self.adsCollectionView.reloadData()
+//                }
+//            } catch {
+//                print("Error during JSON serialization: \(error.localizedDescription)")
+//            }
+//        })
+//        task.resume()
     }
 
 }
