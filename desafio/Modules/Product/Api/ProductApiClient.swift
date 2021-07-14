@@ -10,7 +10,7 @@ import Promises
 import Alamofire
 
 class ProductApiClient: ApiClient {
-    static func listProducts() -> Promise<ListAds> {
-        return performRequestAsync(route: ProductEndpoint.listProducts)
+    static func listProducts(request: AdsRequest?) -> Promise<ListAds> {
+        return performRequestAsync(route: ProductEndpoint.listProducts(request: request))
     }
 }

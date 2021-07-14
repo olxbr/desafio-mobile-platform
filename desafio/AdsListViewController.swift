@@ -33,7 +33,7 @@ class AdsListViewController: UIViewController {
     
     private func getAds() {
         
-        ProductApiClient.listProducts().then(on: .main) { response in
+        ProductApiClient.listProducts(request: nil).then(on: .main) { response in
             
             self.ads = response.list_ads ?? []
             DispatchQueue.main.async {

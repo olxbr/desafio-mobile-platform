@@ -9,6 +9,8 @@ target 'desafio' do
   pod 'Alamofire', '~> 5.4'
   pod 'AlamofireNetworkActivityLogger', '~> 3.4'
   pod 'PromisesSwift'
+  pod 'AloeStackView'
+  pod 'SnapKit'
 
   target 'desafioTests' do
     inherit! :search_paths

@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 enum ProductEndpoint: ApiConfiguration {
-    case listProducts
+    case listProducts(request: AdsRequest?)
 
     
     var baseUrl: String {
@@ -32,8 +32,19 @@ enum ProductEndpoint: ApiConfiguration {
     
     var parameters: Parameters? {
         switch self {
-        default:
-            return nil
+            case .listProducts(let request):
+                var paramenters : [String : Any] = [String : Any]()
+                if let requestData = request {
+                    paramenters.updateValue(requestData.lim, forKey: "lim")
+                    paramenters.updateValue(requestData.region, forKey: "region")
+                    paramenters.updateValue(requestData.sort, forKey: "sort")
+                    paramenters.updateValue(requestData.state, forKey: "state")
+                    paramenters.updateValue(requestData.lang, forKey: "lang")
+                    return paramenters
+                }
+                return nil
+            default:
+                return nil
         }
     }
     

@@ -7,6 +7,14 @@
 
 import Foundation
 
+struct AdsRequest: Decodable {
+    var lim: Int
+    var region: Int
+    var sort: String
+    var state: Int
+    var lang: String
+}
+
 struct ListAds: Decodable {
     let list_ads: [Ad]?
 }
